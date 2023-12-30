@@ -29,14 +29,14 @@ body {
   background-attachment: fixed
 }
 
-
-
 .card {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
   background: var(--surface-card);
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 3px 4px #0000001a, 0 24px 36px #0000000a;
-  border-radius: 14px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
 .layout-wrapper {
@@ -60,6 +60,8 @@ body {
   transition: margin-left 0.3s;
 }
 
+
+
 .layout-sidebar{
   position: fixed;
   height: 100%;
@@ -67,15 +69,14 @@ body {
   background: var(--surface-ground);
   left: 0;
   top: 0;
-  z-index: 997;
-  transform: none;
+  z-index: 999;
   border-radius: 0px 40px 40px 0px;
-  display: flex;
-  flex-direction: column;
-  transition: width 0.12s ease 100ms;
+  mix-blend-mode: normal;
+  transition: all 0.2s ease 100ms;
 
 }
 .hover\:layout-sidebar-active:hover {
+  transform: translate3d(0px, 0px, 0px);
   width: 20rem;
 }
 
@@ -89,7 +90,7 @@ body {
 
 .layout-sidebar .menu-item-title {
   visibility: hidden;
-  transition: visibility 0.2s ease 100m;
+  transition: all 0.12s ease 100ms;
 }
 
 .layout-main-content{

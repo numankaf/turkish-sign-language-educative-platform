@@ -1,8 +1,11 @@
 package tr.com.duosignlanguage.config.audit;
 
 import org.springframework.data.domain.AuditorAware;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import tr.com.duosignlanguage.config.security.UserDetailsImpl;
 
 import java.security.Principal;
 import java.util.Optional;
@@ -10,10 +13,18 @@ import java.util.Optional;
 public class AuditorAwareImpl implements AuditorAware<String> {
     @Override
     public Optional<String> getCurrentAuditor() {
-        Optional<String> userInfo = Optional.ofNullable(SecurityContextHolder.getContext()).map(SecurityContext::getAuthentication).map(Principal::getName);
-        if(userInfo.get().equals("anonymousUser")){
+        Authentication authentication =
+                SecurityContextHolder
+                        .getContext()
+                        .getAuthentication();
+        if (authentication == null ||
+                !authentication.isAuthenticated() ||
+                authentication instanceof AnonymousAuthenticationToken
+        ) {
             return Optional.of("SYSTEM");
         }
-        return userInfo;
+
+        UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
+        return Optional.ofNullable(userPrincipal.getUsername());
     }
 }

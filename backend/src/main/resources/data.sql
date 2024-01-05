@@ -1,0 +1,12 @@
+INSERT INTO USERS (USERNAME, EMAIL, NAME, SURNAME, PASSWORD, ROLE, IS_ACTIVE,
+                   CREATED_BY, CREATED_DATE, LAST_MODIFIED_BY, LAST_MODIFIED_DATE)
+VALUES ('admin', 'admin@gmail.com', 'System', 'Admin',
+        '$2a$10$T398v1AslBL/xMR0ODPxiOcOpX.seTaiE17BCfvnCPV0fd3Tvzr8i', 'ADMIN', true,
+        'SYSTEM', CURRENT_DATE(), 'SYSTEM', CURRENT_DATE());
+
+
+INSERT INTO USERS (USERNAME, EMAIL, NAME, SURNAME, PASSWORD, ROLE, IS_ACTIVE,
+                   CREATED_BY, CREATED_DATE, LAST_MODIFIED_BY, LAST_MODIFIED_DATE)
+VALUES ('numan.kafadar', 'numankafadar97@gmail.com', 'Numan', 'Kafadar',
+        '$2a$10$T398v1AslBL/xMR0ODPxiOcOpX.seTaiE17BCfvnCPV0fd3Tvzr8i', 'STANDART_USER', true,
+        'SYSTEM', CURRENT_DATE(), 'SYSTEM', CURRENT_DATE());

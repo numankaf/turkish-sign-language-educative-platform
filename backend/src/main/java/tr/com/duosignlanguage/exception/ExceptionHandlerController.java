@@ -7,6 +7,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import tr.com.duosignlanguage.exception.domain.UserNotFoundException;
 import tr.com.duosignlanguage.exception.util.HttpResponseUtil;
 
 @RestControllerAdvice
@@ -14,8 +15,13 @@ import tr.com.duosignlanguage.exception.util.HttpResponseUtil;
 public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(BadCredentialsException.class)
-    public ResponseEntity<HttpResponse> handleMultipleAccountsOnSingleTypeException(BadCredentialsException exception) {
+    public ResponseEntity<HttpResponse> handleBadCredentialsException(BadCredentialsException exception) {
         return HttpResponseUtil.createHttpErrorResponse(HttpStatus.UNAUTHORIZED, exception.getMessage(), exception);
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<HttpResponse> handleUserNotFoundException(UserNotFoundException exception) {
+        return HttpResponseUtil.createHttpErrorResponse(HttpStatus.NOT_FOUND, exception.getMessage(), exception);
     }
 
 

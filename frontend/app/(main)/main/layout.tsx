@@ -3,7 +3,6 @@ import MainContainer from "@/components/layout/MainContainer";
 import { TbBooks } from "react-icons/tb";
 import { MdDashboard } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
-import { GiVideoConference } from "react-icons/gi";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { MenuItem } from "@/app/types/layout";

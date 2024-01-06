@@ -1,6 +1,6 @@
 application:
   jwt_secret: 76c134d8eb7aa868e0138ba6f1e34c3a3f8ea5c344e5a35dd1dc65fec3be8800
-  jwt_expires_in: 1800000 #30 minutes
+  jwt_expires_in: 3000000 #5 minutes
   refresh_token:
     jwt_expires_in: 604800000 #7 day
   title: DuoSignLanguage

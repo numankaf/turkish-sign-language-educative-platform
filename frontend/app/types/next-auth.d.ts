@@ -3,7 +3,7 @@ import NextAuth from "next-auth";
 declare module "next-auth" {
   interface Session {
     user: {
-      id: string;
+      id: number;
       role: string;
       username: string;
       email: string;
@@ -12,7 +12,6 @@ declare module "next-auth" {
       refresh_token: string;
       expires_in: number;
       refresh_expires_in: number;
-      session_expiry: string;
     };
   }
 }

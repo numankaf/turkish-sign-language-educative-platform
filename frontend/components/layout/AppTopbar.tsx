@@ -9,20 +9,38 @@ import { BiCategory } from "react-icons/bi";
 import { PrimeReactContext } from "primereact/api";
 import { useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import axios from "@/app/lib/axios";
+import { axiosBase } from "@/app/lib/axios";
 import { Toast } from "primereact/toast";
+import Switch from "react-switch";
+import { CiLight } from "react-icons/ci";
+import { MdOutlineDarkMode } from "react-icons/md";
 const AppTopbar = () => {
+  const { changeTheme } = useContext<any>(PrimeReactContext);
   const [theme, setTheme] = useState<string>("dark");
   const [open, setOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const toast = useRef<Toast>(null);
   const { data: session, status } = useSession();
+  const [isDarkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = (checked: boolean) => {
+    setDarkMode(checked);
+    changeTheme(
+      isDarkMode ? "lara-dark-teal" : "lara-light-teal",
+      isDarkMode ? "lara-light-teal" : "lara-dark-teal",
+      "theme-link",
+      () => {}
+    );
+    localStorage.setItem(
+      "theme",
+      isDarkMode ? "lara-light-teal" : "lara-dark-teal"
+    );
+  };
 
   useEffect(() => {
-    const localTheme = localStorage.getItem("lara-light-teal");
+    const localTheme = localStorage.getItem("theme");
     if (localTheme !== null) {
-      setTheme(localTheme);
+      localTheme.includes("dark") ? setDarkMode(true) : setDarkMode(false);
     }
   }, []);
 
@@ -39,23 +57,19 @@ const AppTopbar = () => {
   });
 
   const logout = () => {
-    axios
-      .post("/auth-service/auth/logout", {
-        refreshToken: session?.user.refresh_token,
+    axiosBase
+      .post("/auth/logout", {
+        refresh_token: session?.user.refresh_token,
       })
       .then(() => {
-        signOut({ redirect: false }).then(() => {
-          router.push("/auth/login"); // Redirect to the dashboard page after signing out
-        });
+        console.log("Logged out");
       })
-      .catch((e) => {
-        toast.current?.show({
-          severity: "error",
-          summary: "Error",
-          detail: e.message,
-          life: 3000,
-        });
+      .catch((e)=>{
+        
       });
+    signOut({ redirect: false }).then(() => {
+      router.push("/auth/login"); // Redirect to the dashboard page after signing out
+    });
   };
 
   return (
@@ -66,6 +80,43 @@ const AppTopbar = () => {
           <div className="flex flex-wrap justify-between items-center">
             <div></div>
             <div className="flex items-center ">
+              <div className="mx-2">
+                <Switch
+                  checked={isDarkMode}
+                  onChange={toggleDarkMode}
+                   handleDiameter={28}
+                  offColor={"#F6F9FC"}
+                  onColor={"#2E323F"}
+                  offHandleColor={"#d1ca3f"}
+                  onHandleColor={"#44486d"}
+                  height={40}
+                  width={70}
+                  borderRadius={6}
+                  activeBoxShadow="0px 0px 1px 2px #fffc35"
+                  uncheckedIcon={
+                    <div className="w-full h-full flex items-center justify-center">
+                      <MdOutlineDarkMode size={25} />
+                    </div>
+                  }
+                  checkedIcon={
+                    <div className="w-full h-full flex items-center justify-center">
+                      <CiLight size={25} />
+                    </div>
+                  }
+                  uncheckedHandleIcon={
+                    <div className="w-full h-full flex items-center justify-center">
+                      <CiLight size={25} color="white" />
+                    </div>
+                  }
+                  checkedHandleIcon={
+                    <div className="w-full h-full flex items-center justify-center">
+                      <MdOutlineDarkMode size={25} />
+                    </div>
+                  }
+                  className="react-switch"
+                  id="small-radius-switch"
+                />
+              </div>
               <div className=" relative inline-block flex" ref={menuRef}>
                 <div>
                   <div>
@@ -81,8 +132,8 @@ const AppTopbar = () => {
                         loading="lazy"
                         src={"/images/empty-profile.jpg"}
                       />
-                      {/* <span>{session?.user.username}</span>
-                      <IoIosArrowDown /> */}
+                      <span>{session?.user.username}</span>
+                      <IoIosArrowDown />
                     </button>
                   </div>
 

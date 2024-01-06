@@ -60,9 +60,9 @@ public class AuthService {
     }
 
     public AuthorizationResponseDto refreshToken(RefreshTokenDto dto){
-        UUID tokenId = UUID.fromString(tokenProvider.getTokenIdFromRefreshToken(dto.getRefresh_token()));
-        Long userId = tokenProvider.getUserIdFromToken(dto.getRefresh_token());
-        if (tokenProvider.validateToken(dto.getRefresh_token()) && refreshTokenRepository.existsById(tokenId)) {
+        UUID tokenId = UUID.fromString(tokenProvider.getTokenIdFromRefreshToken(dto.getRefreshToken()));
+        Long userId = tokenProvider.getUserIdFromToken(dto.getRefreshToken());
+        if (tokenProvider.validateToken(dto.getRefreshToken()) && refreshTokenRepository.existsById(tokenId)) {
             // valid and exists in db
             refreshTokenRepository.deleteById(tokenId);
             RefreshToken refreshToken = new RefreshToken();
@@ -89,8 +89,8 @@ public class AuthService {
     }
 
     public void logout(RefreshTokenDto dto){
-        UUID tokenId = UUID.fromString(tokenProvider.getTokenIdFromRefreshToken(dto.getRefresh_token()));
-        if (tokenProvider.validateToken(dto.getRefresh_token()) && refreshTokenRepository.existsById(tokenId)) {
+        UUID tokenId = UUID.fromString(tokenProvider.getTokenIdFromRefreshToken(dto.getRefreshToken()));
+        if (tokenProvider.validateToken(dto.getRefreshToken()) && refreshTokenRepository.existsById(tokenId)) {
             // valid and exists in db
             refreshTokenRepository.deleteById(tokenId);
         }else{
@@ -100,10 +100,10 @@ public class AuthService {
 
     @Transactional
     public void logoutAll(RefreshTokenDto dto){
-        UUID tokenId =UUID.fromString(tokenProvider.getTokenIdFromRefreshToken(dto.getRefresh_token()));
-        if (tokenProvider.validateToken(dto.getRefresh_token()) && refreshTokenRepository.existsById(tokenId)) {
+        UUID tokenId =UUID.fromString(tokenProvider.getTokenIdFromRefreshToken(dto.getRefreshToken()));
+        if (tokenProvider.validateToken(dto.getRefreshToken()) && refreshTokenRepository.existsById(tokenId)) {
             // valid and exists in db
-            Long userId = tokenProvider.getUserIdFromToken(dto.getRefresh_token());
+            Long userId = tokenProvider.getUserIdFromToken(dto.getRefreshToken());
             refreshTokenRepository.deleteAllByUserId(userId);
         }else{
             throw new BadCredentialsException(INVALID_TOKEN);

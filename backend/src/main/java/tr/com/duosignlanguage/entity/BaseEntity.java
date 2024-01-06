@@ -22,6 +22,7 @@ public class BaseEntity {
     @CreatedBy
     @Column(name = "CREATED_BY")
     private String createdBy;
+
     @LastModifiedBy
     @Column(name = "LAST_MODIFIED_BY")
     private String lastModifiedBy;

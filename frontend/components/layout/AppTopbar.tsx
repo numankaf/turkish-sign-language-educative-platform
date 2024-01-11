@@ -146,7 +146,7 @@ const AppTopbar = () => {
                       <div className="py-1 m-1 divide-y divide-gray-100 ">
                         <div>
                           <div className="px-4 py-3  ">
-                            <div>{session?.user.name}</div>
+                            <div>{session?.user.fullname}</div>
                             <div className="font-medium truncate">
                               {session?.user.email}
                             </div>

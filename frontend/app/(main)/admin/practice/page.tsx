@@ -10,12 +10,13 @@ const PracticeAdminPage = () => {
 
   return (
     <div className="card">
-      <div className="flex items-center justify-center m-4 rounded-lg">
+      <div className="flex items-center justify-center">
         <Webcam
+          className="rounded-lg w-[30rem]"
           audio={false}
-          height={450}
+          height={"auto"}
           screenshotFormat="image/jpeg"
-          width={600}
+          width={"auto"}
           videoConstraints={videoConstraints}
         ></Webcam>
       </div>

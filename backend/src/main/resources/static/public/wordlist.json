@@ -1,0 +1,1134 @@
+{
+  "words": [
+      {
+        "ClassId": "0",
+        "TR": "abla",
+        "EN": "sister"
+      },
+      {
+        "ClassId": "1",
+        "TR": "acele",
+        "EN": "hurry"
+      },
+      {
+        "ClassId": "2",
+        "TR": "acikmak",
+        "EN": "hungry"
+      },
+      {
+        "ClassId": "3",
+        "TR": "afiyet_olsun",
+        "EN": "enjoy_your_meal"
+      },
+      {
+        "ClassId": "4",
+        "TR": "agabey",
+        "EN": "brother"
+      },
+      {
+        "ClassId": "5",
+        "TR": "agac",
+        "EN": "tree"
+      },
+      {
+        "ClassId": "6",
+        "TR": "agir",
+        "EN": "heavy"
+      },
+      {
+        "ClassId": "7",
+        "TR": "aglamak",
+        "EN": "cry"
+      },
+      {
+        "ClassId": "8",
+        "TR": "aile",
+        "EN": "family"
+      },
+      {
+        "ClassId": "9",
+        "TR": "akilli",
+        "EN": "wise"
+      },
+      {
+        "ClassId": "10",
+        "TR": "akilsiz",
+        "EN": "unwise"
+      },
+      {
+        "ClassId": "11",
+        "TR": "akraba",
+        "EN": "kin"
+      },
+      {
+        "ClassId": "12",
+        "TR": "alisveris",
+        "EN": "shopping"
+      },
+      {
+        "ClassId": "13",
+        "TR": "anahtar",
+        "EN": "key"
+      },
+      {
+        "ClassId": "14",
+        "TR": "anne",
+        "EN": "mother"
+      },
+      {
+        "ClassId": "15",
+        "TR": "arkadas",
+        "EN": "friend"
+      },
+      {
+        "ClassId": "16",
+        "TR": "ataturk",
+        "EN": "ataturk"
+      },
+      {
+        "ClassId": "17",
+        "TR": "ayakkabi",
+        "EN": "shoe"
+      },
+      {
+        "ClassId": "18",
+        "TR": "ayna",
+        "EN": "mirror"
+      },
+      {
+        "ClassId": "19",
+        "TR": "ayni",
+        "EN": "same"
+      },
+      {
+        "ClassId": "20",
+        "TR": "baba",
+        "EN": "father"
+      },
+      {
+        "ClassId": "21",
+        "TR": "bahce",
+        "EN": "garden"
+      },
+      {
+        "ClassId": "22",
+        "TR": "bakmak",
+        "EN": "look"
+      },
+      {
+        "ClassId": "23",
+        "TR": "bal",
+        "EN": "honey"
+      },
+      {
+        "ClassId": "24",
+        "TR": "bardak",
+        "EN": "glass"
+      },
+      {
+        "ClassId": "25",
+        "TR": "bayrak",
+        "EN": "flag"
+      },
+      {
+        "ClassId": "26",
+        "TR": "bayram",
+        "EN": "feast"
+      },
+      {
+        "ClassId": "27",
+        "TR": "bebek",
+        "EN": "baby"
+      },
+      {
+        "ClassId": "28",
+        "TR": "bekar",
+        "EN": "single"
+      },
+      {
+        "ClassId": "29",
+        "TR": "beklemek",
+        "EN": "wait"
+      },
+      {
+        "ClassId": "30",
+        "TR": "ben",
+        "EN": "I"
+      },
+      {
+        "ClassId": "31",
+        "TR": "benzin",
+        "EN": "petrol"
+      },
+      {
+        "ClassId": "32",
+        "TR": "beraber",
+        "EN": "together"
+      },
+      {
+        "ClassId": "33",
+        "TR": "bilgi_vermek",
+        "EN": "inform"
+      },
+      {
+        "ClassId": "34",
+        "TR": "biz",
+        "EN": "we"
+      },
+      {
+        "ClassId": "35",
+        "TR": "calismak",
+        "EN": "work"
+      },
+      {
+        "ClassId": "36",
+        "TR": "carsamba",
+        "EN": "wednesday"
+      },
+      {
+        "ClassId": "37",
+        "TR": "catal",
+        "EN": "fork"
+      },
+      {
+        "ClassId": "38",
+        "TR": "cay",
+        "EN": "tea"
+      },
+      {
+        "ClassId": "39",
+        "TR": "caydanlik",
+        "EN": "teapot"
+      },
+      {
+        "ClassId": "40",
+        "TR": "cekic",
+        "EN": "hammer"
+      },
+      {
+        "ClassId": "41",
+        "TR": "cirkin",
+        "EN": "ugly"
+      },
+      {
+        "ClassId": "42",
+        "TR": "cocuk",
+        "EN": "child"
+      },
+      {
+        "ClassId": "43",
+        "TR": "corba",
+        "EN": "soup"
+      },
+      {
+        "ClassId": "44",
+        "TR": "cuma",
+        "EN": "friday"
+      },
+      {
+        "ClassId": "45",
+        "TR": "cumartesi",
+        "EN": "saturday"
+      },
+      {
+        "ClassId": "46",
+        "TR": "cuzdan",
+        "EN": "wallet"
+      },
+      {
+        "ClassId": "47",
+        "TR": "dakika",
+        "EN": "minute"
+      },
+      {
+        "ClassId": "48",
+        "TR": "dede",
+        "EN": "grandfather"
+      },
+      {
+        "ClassId": "49",
+        "TR": "degistirmek",
+        "EN": "change"
+      },
+      {
+        "ClassId": "50",
+        "TR": "devirmek",
+        "EN": "topple"
+      },
+      {
+        "ClassId": "51",
+        "TR": "devlet",
+        "EN": "government"
+      },
+      {
+        "ClassId": "52",
+        "TR": "doktor",
+        "EN": "doctor"
+      },
+      {
+        "ClassId": "53",
+        "TR": "dolu",
+        "EN": "full"
+      },
+      {
+        "ClassId": "54",
+        "TR": "dugun",
+        "EN": "wedding"
+      },
+      {
+        "ClassId": "55",
+        "TR": "dun",
+        "EN": "yesterday"
+      },
+      {
+        "ClassId": "56",
+        "TR": "dusman",
+        "EN": "enemy"
+      },
+      {
+        "ClassId": "57",
+        "TR": "duvar",
+        "EN": "wall"
+      },
+      {
+        "ClassId": "58",
+        "TR": "eczane",
+        "EN": "pharmacy"
+      },
+      {
+        "ClassId": "59",
+        "TR": "eldiven",
+        "EN": "glove"
+      },
+      {
+        "ClassId": "60",
+        "TR": "emek",
+        "EN": "labor"
+      },
+      {
+        "ClassId": "61",
+        "TR": "emekli",
+        "EN": "retired"
+      },
+      {
+        "ClassId": "62",
+        "TR": "erkek",
+        "EN": "male"
+      },
+      {
+        "ClassId": "63",
+        "TR": "et",
+        "EN": "meal"
+      },
+      {
+        "ClassId": "64",
+        "TR": "ev",
+        "EN": "house"
+      },
+      {
+        "ClassId": "65",
+        "TR": "evet",
+        "EN": "yes"
+      },
+      {
+        "ClassId": "66",
+        "TR": "evli",
+        "EN": "married"
+      },
+      {
+        "ClassId": "67",
+        "TR": "ezberlemek",
+        "EN": "memorize"
+      },
+      {
+        "ClassId": "68",
+        "TR": "fil",
+        "EN": "elephant"
+      },
+      {
+        "ClassId": "69",
+        "TR": "fotograf",
+        "EN": "photograph"
+      },
+      {
+        "ClassId": "70",
+        "TR": "futbol",
+        "EN": "football"
+      },
+      {
+        "ClassId": "71",
+        "TR": "gecmis",
+        "EN": "past"
+      },
+      {
+        "ClassId": "72",
+        "TR": "gecmis_olsun",
+        "EN": "get_well"
+      },
+      {
+        "ClassId": "73",
+        "TR": "getirmek",
+        "EN": "bring"
+      },
+      {
+        "ClassId": "74",
+        "TR": "gol",
+        "EN": "lake"
+      },
+      {
+        "ClassId": "75",
+        "TR": "gomlek",
+        "EN": "shirt"
+      },
+      {
+        "ClassId": "76",
+        "TR": "gormek",
+        "EN": "see"
+      },
+      {
+        "ClassId": "77",
+        "TR": "gostermek",
+        "EN": "show"
+      },
+      {
+        "ClassId": "78",
+        "TR": "gulmek",
+        "EN": "laugh"
+      },
+      {
+        "ClassId": "79",
+        "TR": "hafif",
+        "EN": "lightweight"
+      },
+      {
+        "ClassId": "80",
+        "TR": "hakli",
+        "EN": "right"
+      },
+      {
+        "ClassId": "81",
+        "TR": "hali",
+        "EN": "carpet"
+      },
+      {
+        "ClassId": "82",
+        "TR": "hasta",
+        "EN": "ill"
+      },
+      {
+        "ClassId": "83",
+        "TR": "hastane",
+        "EN": "hospital"
+      },
+      {
+        "ClassId": "84",
+        "TR": "hata",
+        "EN": "fault"
+      },
+      {
+        "ClassId": "85",
+        "TR": "havlu",
+        "EN": "towel"
+      },
+      {
+        "ClassId": "86",
+        "TR": "hayir",
+        "EN": "no"
+      },
+      {
+        "ClassId": "87",
+        "TR": "hayirli_olsun",
+        "EN": "congratulations"
+      },
+      {
+        "ClassId": "88",
+        "TR": "hayvan",
+        "EN": "animal"
+      },
+      {
+        "ClassId": "89",
+        "TR": "hediye",
+        "EN": "gift"
+      },
+      {
+        "ClassId": "90",
+        "TR": "helal",
+        "EN": "halal"
+      },
+      {
+        "ClassId": "91",
+        "TR": "hep",
+        "EN": "always"
+      },
+      {
+        "ClassId": "92",
+        "TR": "hic",
+        "EN": "never"
+      },
+      {
+        "ClassId": "93",
+        "TR": "hoscakal",
+        "EN": "goodbye"
+      },
+      {
+        "ClassId": "94",
+        "TR": "icmek",
+        "EN": "drink"
+      },
+      {
+        "ClassId": "95",
+        "TR": "igne",
+        "EN": "needle"
+      },
+      {
+        "ClassId": "96",
+        "TR": "ilac",
+        "EN": "medicine"
+      },
+      {
+        "ClassId": "97",
+        "TR": "ilgilenmemek",
+        "EN": "not_interested"
+      },
+      {
+        "ClassId": "98",
+        "TR": "isik",
+        "EN": "light"
+      },
+      {
+        "ClassId": "99",
+        "TR": "itmek",
+        "EN": "push"
+      },
+      {
+        "ClassId": "100",
+        "TR": "iyi",
+        "EN": "good"
+      },
+      {
+        "ClassId": "101",
+        "TR": "kacmak",
+        "EN": "escape"
+      },
+      {
+        "ClassId": "102",
+        "TR": "kahvalti",
+        "EN": "breakfast"
+      },
+      {
+        "ClassId": "103",
+        "TR": "kalem",
+        "EN": "pencil"
+      },
+      {
+        "ClassId": "104",
+        "TR": "kalorifer",
+        "EN": "radiator"
+      },
+      {
+        "ClassId": "105",
+        "TR": "kapi",
+        "EN": "door"
+      },
+      {
+        "ClassId": "106",
+        "TR": "kardes",
+        "EN": "sibling"
+      },
+      {
+        "ClassId": "107",
+        "TR": "kavsak",
+        "EN": "crossroads"
+      },
+      {
+        "ClassId": "108",
+        "TR": "kaza",
+        "EN": "accident"
+      },
+      {
+        "ClassId": "109",
+        "TR": "kemer",
+        "EN": "belt"
+      },
+      {
+        "ClassId": "110",
+        "TR": "keske",
+        "EN": "if_only"
+      },
+      {
+        "ClassId": "111",
+        "TR": "kim",
+        "EN": "who"
+      },
+      {
+        "ClassId": "112",
+        "TR": "kimlik",
+        "EN": "identity"
+      },
+      {
+        "ClassId": "113",
+        "TR": "kira",
+        "EN": "rent"
+      },
+      {
+        "ClassId": "114",
+        "TR": "kitap",
+        "EN": "book"
+      },
+      {
+        "ClassId": "115",
+        "TR": "kiyma",
+        "EN": "mince"
+      },
+      {
+        "ClassId": "116",
+        "TR": "kiz",
+        "EN": "female"
+      },
+      {
+        "ClassId": "117",
+        "TR": "koku",
+        "EN": "smell"
+      },
+      {
+        "ClassId": "118",
+        "TR": "kolonya",
+        "EN": "cologne"
+      },
+      {
+        "ClassId": "119",
+        "TR": "komur",
+        "EN": "coal"
+      },
+      {
+        "ClassId": "120",
+        "TR": "kopek",
+        "EN": "dog"
+      },
+      {
+        "ClassId": "121",
+        "TR": "kopru",
+        "EN": "bridge"
+      },
+      {
+        "ClassId": "122",
+        "TR": "kotu",
+        "EN": "bad"
+      },
+      {
+        "ClassId": "123",
+        "TR": "kucak",
+        "EN": "lap"
+      },
+      {
+        "ClassId": "124",
+        "TR": "leke",
+        "EN": "stain"
+      },
+      {
+        "ClassId": "125",
+        "TR": "maas",
+        "EN": "salary"
+      },
+      {
+        "ClassId": "126",
+        "TR": "makas",
+        "EN": "scissors"
+      },
+      {
+        "ClassId": "127",
+        "TR": "masa",
+        "EN": "tongs"
+      },
+      {
+        "ClassId": "128",
+        "TR": "masallah",
+        "EN": "god_preserve"
+      },
+      {
+        "ClassId": "129",
+        "TR": "melek",
+        "EN": "angel"
+      },
+      {
+        "ClassId": "130",
+        "TR": "memnun_olmak",
+        "EN": "be_pleased"
+      },
+      {
+        "ClassId": "131",
+        "TR": "mendil",
+        "EN": "napkin"
+      },
+      {
+        "ClassId": "132",
+        "TR": "merdiven",
+        "EN": "stairs"
+      },
+      {
+        "ClassId": "133",
+        "TR": "misafir",
+        "EN": "guest"
+      },
+      {
+        "ClassId": "134",
+        "TR": "mudur",
+        "EN": "manager"
+      },
+      {
+        "ClassId": "135",
+        "TR": "musluk",
+        "EN": "tap"
+      },
+      {
+        "ClassId": "136",
+        "TR": "nasil",
+        "EN": "how"
+      },
+      {
+        "ClassId": "137",
+        "TR": "neden",
+        "EN": "why"
+      },
+      {
+        "ClassId": "138",
+        "TR": "nerede",
+        "EN": "where"
+      },
+      {
+        "ClassId": "139",
+        "TR": "nine",
+        "EN": "grandmother"
+      },
+      {
+        "ClassId": "140",
+        "TR": "ocak",
+        "EN": "oven"
+      },
+      {
+        "ClassId": "141",
+        "TR": "oda",
+        "EN": "room"
+      },
+      {
+        "ClassId": "142",
+        "TR": "odun",
+        "EN": "wood"
+      },
+      {
+        "ClassId": "143",
+        "TR": "ogretmen",
+        "EN": "teacher"
+      },
+      {
+        "ClassId": "144",
+        "TR": "okul",
+        "EN": "school"
+      },
+      {
+        "ClassId": "145",
+        "TR": "olimpiyat",
+        "EN": "olympiad"
+      },
+      {
+        "ClassId": "146",
+        "TR": "olmaz",
+        "EN": "nope"
+      },
+      {
+        "ClassId": "147",
+        "TR": "olur",
+        "EN": "allright"
+      },
+      {
+        "ClassId": "148",
+        "TR": "onlar",
+        "EN": "they"
+      },
+      {
+        "ClassId": "149",
+        "TR": "orman",
+        "EN": "forest"
+      },
+      {
+        "ClassId": "150",
+        "TR": "oruc",
+        "EN": "fasting"
+      },
+      {
+        "ClassId": "151",
+        "TR": "ozur_dilemek",
+        "EN": "apologize"
+      },
+      {
+        "ClassId": "152",
+        "TR": "pamuk",
+        "EN": "cotton"
+      },
+      {
+        "ClassId": "153",
+        "TR": "pantolon",
+        "EN": "trousers"
+      },
+      {
+        "ClassId": "154",
+        "TR": "para",
+        "EN": "money"
+      },
+      {
+        "ClassId": "155",
+        "TR": "pastirma",
+        "EN": "pastrami"
+      },
+      {
+        "ClassId": "156",
+        "TR": "patates",
+        "EN": "potato"
+      },
+      {
+        "ClassId": "157",
+        "TR": "pazar",
+        "EN": "sunday"
+      },
+      {
+        "ClassId": "158",
+        "TR": "pazartesi",
+        "EN": "monday"
+      },
+      {
+        "ClassId": "159",
+        "TR": "pencere",
+        "EN": "window"
+      },
+      {
+        "ClassId": "160",
+        "TR": "persembe",
+        "EN": "thursday"
+      },
+      {
+        "ClassId": "161",
+        "TR": "piknik",
+        "EN": "picnic"
+      },
+      {
+        "ClassId": "162",
+        "TR": "polis",
+        "EN": "police"
+      },
+      {
+        "ClassId": "163",
+        "TR": "psikoloji",
+        "EN": "psychology"
+      },
+      {
+        "ClassId": "164",
+        "TR": "rica_etmek",
+        "EN": "request"
+      },
+      {
+        "ClassId": "165",
+        "TR": "saat",
+        "EN": "hour"
+      },
+      {
+        "ClassId": "166",
+        "TR": "sabun",
+        "EN": "soap"
+      },
+      {
+        "ClassId": "167",
+        "TR": "salca",
+        "EN": "sauce"
+      },
+      {
+        "ClassId": "168",
+        "TR": "sali",
+        "EN": "tuesday"
+      },
+      {
+        "ClassId": "169",
+        "TR": "sampiyon",
+        "EN": "champion"
+      },
+      {
+        "ClassId": "170",
+        "TR": "sapka",
+        "EN": "hat"
+      },
+      {
+        "ClassId": "171",
+        "TR": "savas",
+        "EN": "war"
+      },
+      {
+        "ClassId": "172",
+        "TR": "seker",
+        "EN": "sugar"
+      },
+      {
+        "ClassId": "173",
+        "TR": "selam",
+        "EN": "hi"
+      },
+      {
+        "ClassId": "174",
+        "TR": "semsiye",
+        "EN": "umbrella"
+      },
+      {
+        "ClassId": "175",
+        "TR": "sen",
+        "EN": "you"
+      },
+      {
+        "ClassId": "176",
+        "TR": "senet",
+        "EN": "bill"
+      },
+      {
+        "ClassId": "177",
+        "TR": "serbest",
+        "EN": "free"
+      },
+      {
+        "ClassId": "178",
+        "TR": "ses",
+        "EN": "voice"
+      },
+      {
+        "ClassId": "179",
+        "TR": "sevmek",
+        "EN": "love"
+      },
+      {
+        "ClassId": "180",
+        "TR": "seytan",
+        "EN": "evil"
+      },
+      {
+        "ClassId": "181",
+        "TR": "sinir",
+        "EN": "border"
+      },
+      {
+        "ClassId": "182",
+        "TR": "siz",
+        "EN": "you"
+      },
+      {
+        "ClassId": "183",
+        "TR": "soylemek",
+        "EN": "say"
+      },
+      {
+        "ClassId": "184",
+        "TR": "soz",
+        "EN": "promise"
+      },
+      {
+        "ClassId": "185",
+        "TR": "sut",
+        "EN": "milk"
+      },
+      {
+        "ClassId": "186",
+        "TR": "tamam",
+        "EN": "okay"
+      },
+      {
+        "ClassId": "187",
+        "TR": "tarak",
+        "EN": "comb"
+      },
+      {
+        "ClassId": "188",
+        "TR": "tarih",
+        "EN": "date"
+      },
+      {
+        "ClassId": "189",
+        "TR": "tatil",
+        "EN": "holiday"
+      },
+      {
+        "ClassId": "190",
+        "TR": "tatli",
+        "EN": "sweet"
+      },
+      {
+        "ClassId": "191",
+        "TR": "tavan",
+        "EN": "ceiling"
+      },
+      {
+        "ClassId": "192",
+        "TR": "tehlike",
+        "EN": "danger"
+      },
+      {
+        "ClassId": "193",
+        "TR": "telefon",
+        "EN": "telephone"
+      },
+      {
+        "ClassId": "194",
+        "TR": "terazi",
+        "EN": "scales"
+      },
+      {
+        "ClassId": "195",
+        "TR": "terzi",
+        "EN": "tailor"
+      },
+      {
+        "ClassId": "196",
+        "TR": "tesekkur",
+        "EN": "thanks"
+      },
+      {
+        "ClassId": "197",
+        "TR": "tornavida",
+        "EN": "screwdriver"
+      },
+      {
+        "ClassId": "198",
+        "TR": "turkiye",
+        "EN": "turkey"
+      },
+      {
+        "ClassId": "199",
+        "TR": "turuncu",
+        "EN": "orange"
+      },
+      {
+        "ClassId": "200",
+        "TR": "tuvalet",
+        "EN": "toilet"
+      },
+      {
+        "ClassId": "201",
+        "TR": "un",
+        "EN": "flour"
+      },
+      {
+        "ClassId": "202",
+        "TR": "uzak",
+        "EN": "far"
+      },
+      {
+        "ClassId": "203",
+        "TR": "uzgun",
+        "EN": "sad"
+      },
+      {
+        "ClassId": "204",
+        "TR": "var",
+        "EN": "existing"
+      },
+      {
+        "ClassId": "205",
+        "TR": "vergi",
+        "EN": "tax"
+      },
+      {
+        "ClassId": "206",
+        "TR": "yakin",
+        "EN": "near"
+      },
+      {
+        "ClassId": "207",
+        "TR": "yalniz",
+        "EN": "alone"
+      },
+      {
+        "ClassId": "208",
+        "TR": "yanlis",
+        "EN": "wrong"
+      },
+      {
+        "ClassId": "209",
+        "TR": "yapmak",
+        "EN": "do"
+      },
+      {
+        "ClassId": "210",
+        "TR": "yarabandi",
+        "EN": "band-aid"
+      },
+      {
+        "ClassId": "211",
+        "TR": "yardim",
+        "EN": "help"
+      },
+      {
+        "ClassId": "212",
+        "TR": "yarin",
+        "EN": "tomorrow"
+      },
+      {
+        "ClassId": "213",
+        "TR": "yasak",
+        "EN": "forbidden"
+      },
+      {
+        "ClassId": "214",
+        "TR": "yastik",
+        "EN": "pillow"
+      },
+      {
+        "ClassId": "215",
+        "TR": "yatak",
+        "EN": "bed"
+      },
+      {
+        "ClassId": "216",
+        "TR": "yavas",
+        "EN": "slow"
+      },
+      {
+        "ClassId": "217",
+        "TR": "yemek",
+        "EN": "eat"
+      },
+      {
+        "ClassId": "218",
+        "TR": "yemek_pisirmek",
+        "EN": "cook"
+      },
+      {
+        "ClassId": "219",
+        "TR": "yildiz",
+        "EN": "star"
+      },
+      {
+        "ClassId": "220",
+        "TR": "yok",
+        "EN": "absent"
+      },
+      {
+        "ClassId": "221",
+        "TR": "yol",
+        "EN": "road"
+      },
+      {
+        "ClassId": "222",
+        "TR": "yorgun",
+        "EN": "tired"
+      },
+      {
+        "ClassId": "223",
+        "TR": "yumurta",
+        "EN": "egg"
+      },
+      {
+        "ClassId": "224",
+        "TR": "zaman",
+        "EN": "time"
+      },
+      {
+        "ClassId": "225",
+        "TR": "zor",
+        "EN": "difficult"
+      }
+    ]
+}

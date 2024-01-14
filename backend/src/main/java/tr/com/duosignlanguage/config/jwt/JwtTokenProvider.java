@@ -30,6 +30,8 @@ public class JwtTokenProvider {
                 .claim("auth", user.getAuthorities())
                 .claim("token_type", TokenConstants.ACCESS_TOKEN)
                 .claim("uid", user.getId())
+                .claim("fullName", user.getFullName())
+                .claim("email", user.getEmail())
                 .setIssuedAt(new Date())
                 .setExpiration(expireDate)
                 .signWith(SignatureAlgorithm.HS512,jwtSecret)

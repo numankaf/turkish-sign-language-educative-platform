@@ -8,7 +8,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   const rememberMeCookie = getCookie("remember-me", { req, res });
 
-  let maxAge = rememberMeCookie === "true" ? 7 * 24 * 60 * 60 : 10*60;
+  let maxAge = rememberMeCookie === "true" ? 7 * 24 * 60 * 60 : 10 * 60;
 
   return await NextAuth(req, res, {
     providers: [
@@ -41,7 +41,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     callbacks: {
       async jwt({ token, user, trigger, session }: any) {
         if (trigger === "update") {
-          return { ...token, ...session.user }
+          return { ...token, ...session.user };
         }
         return { ...token, ...user };
       },
@@ -52,6 +52,8 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         session.user.id = decoded.uid;
         session.user.role = decoded.auth[0].authority;
         session.user.username = decoded.sub;
+        session.user.fullname = decoded.fullName;
+        session.user.email = decoded.email;
         return session;
       },
       async redirect({ url, baseUrl }) {
@@ -64,7 +66,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     session: {
       strategy: "jwt",
       maxAge,
-      updateAge:0
+      updateAge: 0,
     },
     jwt: {
       maxAge,

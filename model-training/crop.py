@@ -54,40 +54,45 @@ def show_original_and_cropped_image(original_image, cropped_image, cropped_resul
 
 
 
-def crop_image(path,crop_size):
+def pose_detection(frames):
+    detection_results = []
+    with mp_holistic.Holistic(
+        min_detection_confidence=0.5,
+        min_tracking_confidence=0.5) as holistic:
+        for image in frames:
+            image, results = detect_landmarks(image, holistic) 
+
+            detection_results.append(results)
+    return detection_results
+
+def crop_video(path,crop_size):
     cap = cv2.VideoCapture(path)
-    original_frames=[]
-    cropped_frames= []
-    results_list = []
+    original_frames =[]
+    frames = []
     with mp_holistic.Holistic(
         min_detection_confidence=0.5,
         min_tracking_confidence=0.5) as holistic:
         while cap.isOpened():
             success, image = cap.read()
-
+            
             if not success:
                 break
-
+                
             image = cv2.resize(image, (512, 512))
-            original_frames.append(image);
-
+            original_frames.append(image)
             image, results = detect_landmarks(image, holistic) 
 
             x_ = ((results.pose_landmarks.landmark[11].x +results.pose_landmarks.landmark[12].x)/2)*512
             y_ = ((results.pose_landmarks.landmark[11].y +results.pose_landmarks.landmark[12].y)/2)*512
 
-
-            #crop image
-            image_cropped = image[int(y_)-int(crop_size/2):int(y_)+int(crop_size/2), int(x_)-int(crop_size/2):int(x_)+int(crop_size/2)]
-            cropped_frames.append(image_cropped)
-
-            image_cropped, results_cropped = detect_landmarks(image_cropped, holistic) 
-            results_list.append(results_cropped)
-
-            draw_landmarks(image_cropped, results_cropped);
+            image_cropped = image[int(x_)-int(crop_size/2):int(x_)+int(crop_size/2),int(y_)-int(crop_size/2):int(y_)+int(crop_size/2)]
+            
+            frames.append(image_cropped)
+            
             if cv2.waitKey(10) & 0xFF == ord('q'):
                 break
     
     cap.release()
     cv2.destroyAllWindows()
-    return original_frames, cropped_frames, results_list
+    detection_results = pose_detection(frames) 
+    return original_frames, frames, detection_results

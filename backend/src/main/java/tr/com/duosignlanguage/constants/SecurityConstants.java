@@ -2,6 +2,7 @@ package tr.com.duosignlanguage.constants;
 
 public class SecurityConstants {
     public static final String[] AUTH_WHITELIST = {
+            "/public/**",
             "/h2-console/**",
             "/v3/api-docs/**",
             "/swagger-ui/**",

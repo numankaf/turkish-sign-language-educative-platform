@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MainPage = () => {
-  return (
-    <div className='card'>page</div>
-  )
-}
+    return <div className="card">page</div>;
+};
 
 export default MainPage;

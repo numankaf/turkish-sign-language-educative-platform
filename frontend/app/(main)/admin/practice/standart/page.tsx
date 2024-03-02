@@ -34,11 +34,9 @@ const StandartPracticePage = () => {
                 closeOnEscape={true}
                 onHide={() => setInfoVisible(false)}
             >
-                <ReactPlayer url="http://localhost:8080/public/videos/5.mp4" controls width={750} height={500} />
-
-                <video width="750" height="500" controls>
-                    <source src={"http://localhost:8080/public/videos/5.mp4"} type="video/mp4" />
-                </video>
+                <div className="flex items-center justify-center">
+                    <video  className ="rounded-md" width="500" height="500" controls autoPlay src={"http://localhost:8080/resource/video/" + word?.id}></video>
+                </div>
             </Dialog>
             <div className="flex items-center justify-center gap-1 text-lg">
                 <div className="font-semibold">Kelime: </div>

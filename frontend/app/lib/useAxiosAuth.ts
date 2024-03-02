@@ -41,7 +41,7 @@ const useAxiosAuth = () => {
                     });
                     if (session) {
                         session.user.access_token = res.data.access_token;
-                        session.user.refresh_expires_in = res.data.refresh_token;
+                        session.user.refresh_token = res.data.refresh_token;
                     }
                 })
                 .catch((error) => {

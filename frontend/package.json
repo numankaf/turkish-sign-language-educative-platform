@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "^4.17.0",
     "axios": "^1.6.1",
     "cookies-next": "^4.1.0",
     "dayjs": "^1.11.10",

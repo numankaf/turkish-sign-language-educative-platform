@@ -79,15 +79,44 @@ def crop_video(path,crop_size):
                 break
                 
             image = cv2.resize(image, (512, 512))
-            original_frames.append(image)
             image, results = detect_landmarks(image, holistic) 
 
-            x_ = ((results.pose_landmarks.landmark[11].x +results.pose_landmarks.landmark[12].x)/2)*512
-            y_ = ((results.pose_landmarks.landmark[11].y +results.pose_landmarks.landmark[12].y)/2)*512
+            if results.pose_landmarks:
+                original_frames.append(image)
+                
+                x_ = ((results.pose_landmarks.landmark[11].x + results.pose_landmarks.landmark[12].x) / 2) * 512
+                y_ = ((results.pose_landmarks.landmark[11].y + results.pose_landmarks.landmark[12].y) / 2) * 512
 
-            image_cropped = image[int(x_)-int(crop_size/2):int(x_)+int(crop_size/2),int(y_)-int(crop_size/2):int(y_)+int(crop_size/2)]
-            
-            frames.append(image_cropped)
+                x_min = int(x_ - crop_size / 2)
+                x_max = int(x_ + crop_size / 2)
+                y_min = int(y_ - crop_size / 2)
+                y_max = int(y_ + crop_size / 2)
+
+                # Ensure the crop boundaries are within the image bounds
+                x_min = max(0, x_min)
+                x_max = min(image.shape[0], x_max)
+                y_min = max(0, y_min)
+                y_max = min(image.shape[1], y_max)
+
+                # Calculate the padding needed
+                pad_left = max(0, -x_min)
+                pad_right = max(0, x_max - image.shape[0])
+                pad_top = max(0, -y_min)
+                pad_bottom = max(0, y_max - image.shape[1])
+
+                # Pad the image
+                image_padded = np.pad(image, ((pad_left, pad_right), (pad_top, pad_bottom), (0, 0)), mode='constant')
+
+                # Adjust the crop boundaries after padding
+                x_min += pad_left
+                x_max += pad_left
+                y_min += pad_top
+                y_max += pad_top
+
+                # Perform the crop
+                image_cropped = image_padded[x_min:x_max, y_min:y_max, :]
+                
+                frames.append(image_cropped)
             
             if cv2.waitKey(10) & 0xFF == ord('q'):
                 break

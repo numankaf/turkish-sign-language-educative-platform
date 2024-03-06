@@ -4,7 +4,6 @@ import { Word } from "@/app/types/words";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import React, { useEffect, useState } from "react";
-import ReactPlayer from "react-player/youtube";
 import Webcam from "react-webcam";
 
 const StandartPracticePage = () => {

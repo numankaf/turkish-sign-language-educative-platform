@@ -10,7 +10,6 @@ import Webcam from "react-webcam";
 const DemoPage = () => {
     const webcamRef = useRef<any>(null);
     const canvasRef = useRef<any>(null);
-    const landmarkRef = useRef<any>(null);
     let camera = null;
 
     useEffect(() => {
@@ -42,8 +41,6 @@ const DemoPage = () => {
     const onResults = (results: any) => {
         // const video = webcamRef.current.video;
  
-
-
         const videoWidth = webcamRef.current.video.videoWidth;
         const videoHeight = webcamRef.current.video.videoHeight;
 

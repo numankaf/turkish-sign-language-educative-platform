@@ -78,11 +78,13 @@ const ModelDemoPage = () => {
             inputTensor.dispose();
             reshapedInput.dispose();
             // Now you can work with the argmaxIndex and probability
-            if (probability > 0.99) {
+            if (probability > 0.999) {
                 console.log("Argmax Index:", argmaxIndex);
                 console.log("Probability:", probability);
 
                 setSign(actions[argmaxIndex]);
+            }else{
+                setSign("Can't detect");
             }
         }
     };

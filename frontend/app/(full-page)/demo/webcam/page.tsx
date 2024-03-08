@@ -36,10 +36,8 @@ const VideoRecorder = () => {
 
     return (
         <div className="card  flex flex-col items-center justify-center">
-            <Webcam audio={false} ref={webcamRef} videoConstraints={{ aspectRatio: 1, width: 400, height: 400 }} />
-            <Button onClick={startRecording} disabled={recording} label="record">
-                
-            </Button>
+            <Webcam audio={false} ref={webcamRef} videoConstraints={{ frameRate: { ideal: 30, max: 30 }, aspectRatio: 1, width: 400, height: 400 }} />
+            <Button onClick={startRecording} disabled={recording} label="record"></Button>
             {videoBlob && (
                 <video controls>
                     <source src={URL.createObjectURL(videoBlob)} type="video/webm" />

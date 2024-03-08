@@ -34,7 +34,9 @@ const DemoPage = () => {
                 width: 400,
                 height: 400,
             });
+            
             camera.start();
+            console.log(webcamRef.current.video );
         }
     }, []);
 
@@ -43,12 +45,12 @@ const DemoPage = () => {
  
         const videoWidth = webcamRef.current.video.videoWidth;
         const videoHeight = webcamRef.current.video.videoHeight;
-
+        
         // Set canvas width
         canvasRef.current.width = videoWidth;
         canvasRef.current.height = videoHeight;
-
         const canvasElement = canvasRef.current;
+
         const canvasCtx = canvasElement.getContext("2d");
         canvasCtx.save();
         canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);

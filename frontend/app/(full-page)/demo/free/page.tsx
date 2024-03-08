@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import * as cam from "@mediapipe/camera_utils";
 import * as tf from "@tensorflow/tfjs";
@@ -7,7 +6,7 @@ import { Holistic } from "@mediapipe/holistic";
 import Webcam from "react-webcam";
 import { Button } from "primereact/button";
 
-const ModelDemoPage = () => {
+const FreePractice = () => {
     const MAX_ARRAY_SIZE = 60;
     const actions = ["acele", "acikmak", "afiyet olsun", "agabey", "agac", "agir", "aglamak", "aile", "akilli", "akilsiz"];
     const [sign, setSign] = useState<string>("Perform a sign first");
@@ -15,6 +14,53 @@ const ModelDemoPage = () => {
     let camera = null;
     const [model, setModel] = useState<tf.LayersModel | null>(null);
     const [resultsArr, setResultsArr] = useState<any[]>([]);
+    const mediaRecorderRef = React.useRef<any>(null);
+    const [capturing, setCapturing] = React.useState(false);
+    const [recordedChunks, setRecordedChunks] = React.useState([]);
+
+    const handleStartCaptureClick = React.useCallback(() => {
+        mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
+            mimeType: "video/webm",
+        });
+        mediaRecorderRef.current.addEventListener("dataavailable", handleDataAvailable);
+        mediaRecorderRef.current.start();
+        setCapturing(true);
+        setTimeout(() => {
+            mediaRecorderRef.current.stop();
+            setCapturing(false);
+        }, 3500);
+    }, [webcamRef, setCapturing, mediaRecorderRef]);
+
+    const handleDataAvailable = React.useCallback(
+        ({ data }: any) => {
+            if (data.size > 0) {
+                setRecordedChunks((prev) => prev.concat(data));
+            }
+        },
+        [setRecordedChunks]
+    );
+
+    const handleStopCaptureClick = React.useCallback(() => {
+        mediaRecorderRef.current.stop();
+        setCapturing(false);
+    }, [mediaRecorderRef, webcamRef, setCapturing]);
+
+    const handleDownload = React.useCallback(() => {
+        if (recordedChunks.length) {
+            const blob = new Blob(recordedChunks, {
+                type: "video/webm",
+            });
+            const url = URL.createObjectURL(blob);
+            const a: any = document.createElement("a");
+            document.body.appendChild(a);
+            a.style = "display: none";
+            a.href = url;
+            a.download = "react-webcam-stream-capture.webm";
+            a.click();
+            window.URL.revokeObjectURL(url);
+            setRecordedChunks([]);
+        }
+    }, [recordedChunks]);
 
     useEffect(() => {
         async function loadModel() {
@@ -62,13 +108,13 @@ const ModelDemoPage = () => {
     };
 
     const makePrediction = async (results: any[]) => {
-        if (results.length === MAX_ARRAY_SIZE) {
-            const loadedModel = await tf.loadLayersModel("/models/model99/model.json");
+        console.log(results);
+        if (model && results.length === MAX_ARRAY_SIZE) {
             const inputTensor = tf.tensor2d(results);
             const reshapedInput = inputTensor.reshape([1, 60, 150]);
 
             // Make predictions
-            const predictions: any = loadedModel.predict(reshapedInput);
+            const predictions: any = model.predict(reshapedInput);
 
             // Get the index of the maximum value (argmax)
             const argmaxIndex = tf.argMax(predictions.dataSync()).dataSync()[0];
@@ -78,31 +124,18 @@ const ModelDemoPage = () => {
             inputTensor.dispose();
             reshapedInput.dispose();
             // Now you can work with the argmaxIndex and probability
-            if (probability > 0.99) {
-                console.log("Argmax Index:", argmaxIndex);
-                console.log("Probability:", probability);
-
+            if (probability > 0.95) {
                 setSign(actions[argmaxIndex]);
+            } else {
+                setSign("İşaret bulunamadı!");
             }
         }
     };
-
-    // // Run the makePrediction function every second
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //         makePrediction();
-    //     }, 1000);
-
-    //     // Cleanup the interval when the component unmounts
-    //     return () => clearInterval(intervalId);
-    // }, [resultsArr]);
 
     const onResults = (results: any) => {
         setResultsArr((prevResults) => {
             const newKeyPoints = extractKeyPoints(results);
             const updatedResults = [...prevResults, newKeyPoints].slice(-MAX_ARRAY_SIZE);
-            console.log(updatedResults.length);
-            makePrediction(updatedResults);
             return updatedResults;
         });
     };
@@ -116,16 +149,26 @@ const ModelDemoPage = () => {
                     ref={webcamRef}
                     videoConstraints={{
                         frameRate: { ideal: 30, max: 30 },
+                        facingMode: "user",
                         width: 400,
                         height: 400,
                         aspectRatio: 1,
-                        facingMode: "user"
                     }}
                 />
+                {/* <Button label="Predict" onClick={() => makePrediction(resultsArr)}></Button> */}
+
+                {capturing ? (
+                    <Button onClick={handleStopCaptureClick} label="Stop Capture" severity="danger"></Button>
+                ) : (
+                    <Button onClick={handleStartCaptureClick} label="Start Capture"></Button>
+                )}
+                {recordedChunks.length > 0 && <Button onClick={handleDownload} label="Download"></Button>}
+                {/* <p className="text-6xl">{seconds}</p>
+                <Button label="Başla" onClick={handleStart}></Button>
+                {camIsActive && <Button label="Durdur" severity="danger" onClick={handleReset}></Button>} */}
             </div>
-            {/* <Button label="see results length" onClick={() => makePrediction()}></Button> */}
         </div>
     );
 };
 
-export default ModelDemoPage;
+export default FreePractice;
